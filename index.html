@@ -6,10 +6,29 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  
   <header>
     <h1>Welcome to hdn's Blog</h1>
     <p>Thoughts, projects, and random ideas</p>
   </header>
+
+  <button id="theme-toggle">🌙 Dark Mode</button>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  btn.onclick = () => {
+    document.body.classList.toggle('dark');
+    btn.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+  };
+</script>
+
+<style>
+  body.dark {
+    background-color: #222;
+    color: white;
+  }
+</style>
+
 
   <main>
     <article>
@@ -27,22 +46,7 @@
         <p>haodanning@gmail.com</p>
       </article>
 
-      <button id="theme-toggle">🌙 Dark Mode</button>
-
-      <script>
-        const btn = document.getElementById('theme-toggle');
-        btn.onclick = () => {
-          document.body.classList.toggle('dark');
-          btn.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
-        };
-      </script>
       
-      <style>
-        body.dark {
-          background-color: #222;
-          color: white;
-        }
-      </style>
   </main>
 
   <footer>
