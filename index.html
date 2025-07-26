@@ -1,56 +1,103 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>My Personal Blog</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
+    <!-- 🔹 Navigation bar with picture -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img src="images/profile.jpg" alt="Profile" class="navbar-img" />
+        <span class="site-name">hdn</span>
+      </div>
+      <div class="navbar-right">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   
-  <header>
-    <h1>Welcome to hdn's Blog</h1>
-    <p>Thoughts, projects, and random ideas</p>
-  </header>
-
-  <button id="theme-toggle">🌙 Dark Mode</button>
-
-<script>
-  const btn = document.getElementById('theme-toggle');
-  btn.onclick = () => {
-    document.body.classList.toggle('dark');
-    btn.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
-  };
-</script>
-
-<style>
-  body.dark {
-    background-color: #222;
-    color: white;
-  }
-</style>
-
-
-  <main>
-    <article>
-      <h2>🌟 First Post</h2>
-      <p>Hello world! This is my first blog post to try my website! More to come soon.</p>
-    </article>
-
-    <article>
-      <h2>💡 About Me</h2>
-      <p>I’m currently learning cs+math, and I'll write about things I find interesting here!</p>
-    </article>
-
-    <article>
+    <!-- 🔹 Your existing header -->
+    <header>
+      <h1>Welcome to hdn's Blog</h1>
+      <p>Thoughts, projects, and random ideas</p>
+    </header>
+  
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  
+    <script>
+      const btn = document.getElementById('theme-toggle');
+      btn.onclick = () => {
+        document.body.classList.toggle('dark');
+        btn.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+      };
+    </script>
+  
+    <style>
+      body.dark {
+        background-color: #222;
+        color: white;
+      }
+  
+      /* 🔹 Navbar styling */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #444;
+        padding: 10px 20px;
+        color: white;
+      }
+  
+      .navbar-left {
+        display: flex;
+        align-items: center;
+      }
+  
+      .navbar-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+      }
+  
+      .site-name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+  
+      .navbar-right a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 16px;
+      }
+  
+      .navbar-right a:hover {
+        text-decoration: underline;
+      }
+  
+      body.dark .navbar {
+        background-color: #111;
+      }
+    </style>
+  
+    <!-- 🔹 Main blog content -->
+    <main>
+      <article id="home">
+        <h2>🌟 First Post</h2>
+        <p>Hello world! This is my first blog post to try my website! More to come soon.</p>
+      </article>
+  
+      <article id="about">
+        <h2>💡 About Me</h2>
+        <p>I’m currently learning cs+math, and I'll write about things I find interesting here!</p>
+      </article>
+  
+      <article id="contact">
         <h2>📞 Contact Me</h2>
         <p>haodanning@gmail.com</p>
       </article>
-
-      
-  </main>
-
-  <footer>
-    <p>© 2025 hdn's Blog</p>
-  </footer>
-</body>
-</html>
+    </main>
+  
+    <footer>
+      <p>© 2025 hdn's Blog</p>
+    </footer>
+  </body>
+  
